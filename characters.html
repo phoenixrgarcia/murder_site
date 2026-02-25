@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters - Murder in the Void</title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script defer src="node_modules/alpinejs/dist/cdn.min.js"></script>
+</head>
+<body class="dark-bg">
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark navbar-expand-lg mb-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-title">⚡ MURDER IN THE VOID ⚡</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rules.html">Rules</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="characters.html">Characters</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <!-- Title Section -->
+                <div class="text-center mb-5">
+                    <h1 class="dramatic-title">THE CREW</h1>
+                    <p class="subtitle">Meet the players in this cosmic crime</p>
+                    <div class="divider"></div>
+                </div>
+
+                <!-- Characters Grid -->
+                <div x-data="charactersDisplay()" class="characters-grid">
+                    <!-- Captain -->
+                    <div class="card dark-card border-glow character-card">
+                        <div class="card-body">
+                            <h2 class="card-title character-role">CAPTAIN</h2>
+                            <h3 class="character-name mb-2">Vex Donovan</h3>
+                            <p class="text-muted mb-3"><small>Played by: <strong>Player Name</strong></small></p>
+                            <p class="character-blurb">A seasoned captain with decades of space exploration behind her. She's known for her tactical mind and ruthless decision-making. Her ship, the Void Wanderer, is her pride and joy. But is she capable of murder to protect it?</p>
+                            <div class="character-details mt-3 pt-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                                <p><strong>Occupation:</strong> Starship Captain</p>
+                                <p><strong>Secret:</strong> <span class="spoiler">Click to reveal</span></p>
+                                <p><strong>Motive:</strong> <span class="spoiler">Click to reveal</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Engineer -->
+                    <div class="card dark-card border-glow character-card">
+                        <div class="card-body">
+                            <h2 class="card-title character-role">ENGINEER</h2>
+                            <h3 class="character-name mb-2">Kess "Wrench" Morgan</h3>
+                            <p class="text-muted mb-3"><small>Played by: <strong>Player Name</strong></small></p>
+                            <p class="character-blurb">The grease-stained genius behind the Void Wanderer's engines. Wrench can fix anything, but has a short temper and scores to settle with several crew members. Could a mechanical malfunction have been sabotage?</p>
+                            <div class="character-details mt-3 pt-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                                <p><strong>Occupation:</strong> Chief Engineer</p>
+                                <p><strong>Secret:</strong> <span class="spoiler">Click to reveal</span></p>
+                                <p><strong>Motive:</strong> <span class="spoiler">Click to reveal</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Medic -->
+                    <div class="card dark-card border-glow character-card">
+                        <div class="card-body">
+                            <h2 class="card-title character-role">MEDIC</h2>
+                            <h3 class="character-name mb-2">Dr. Atlas Kane</h3>
+                            <p class="text-muted mb-3"><small>Played by: <strong>Player Name</strong></small></p>
+                            <p class="character-blurb">Brilliant but troubled, Dr. Kane manages the medical bay with an iron fist. They have access to poisons and pharmaceuticals. But would they use their knowledge against a crew member?</p>
+                            <div class="character-details mt-3 pt-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                                <p><strong>Occupation:</strong> Ship's Physician</p>
+                                <p><strong>Secret:</strong> <span class="spoiler">Click to reveal</span></p>
+                                <p><strong>Motive:</strong> <span class="spoiler">Click to reveal</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gunslinger -->
+                    <div class="card dark-card border-glow character-card">
+                        <div class="card-body">
+                            <h2 class="card-title character-role">GUNSLINGER</h2>
+                            <h3 class="character-name mb-2">Vera Cross</h3>
+                            <p class="text-muted mb-3"><small>Played by: <strong>Player Name</strong></small></p>
+                            <p class="character-blurb">A mysterious bounty hunter who joined the crew under murky circumstances. She's deadly with her plasma pistol and keeps to herself. Is her past catching up with her?</p>
+                            <div class="character-details mt-3 pt-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                                <p><strong>Occupation:</strong> Bounty Hunter / Security</p>
+                                <p><strong>Secret:</strong> <span class="spoiler">Click to reveal</span></p>
+                                <p><strong>Motive:</strong> <span class="spoiler">Click to reveal</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Merchant -->
+                    <div class="card dark-card border-glow character-card">
+                        <div class="card-body">
+                            <h2 class="card-title character-role">MERCHANT</h2>
+                            <h3 class="character-name mb-2">Silas Crow</h3>
+                            <p class="text-muted mb-3"><small>Played by: <strong>Player Name</strong></small></p>
+                            <p class="character-blurb">A smooth-talking trader who deals in rare goods and information. He's charming, cunning, and always has an angle. What cargo was he really transporting this run?</p>
+                            <div class="character-details mt-3 pt-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                                <p><strong>Occupation:</strong> Cargo Master / Trader</p>
+                                <p><strong>Secret:</strong> <span class="spoiler">Click to reveal</span></p>
+                                <p><strong>Motive:</strong> <span class="spoiler">Click to reveal</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Android -->
+                    <div class="card dark-card border-glow character-card">
+                        <div class="card-body">
+                            <h2 class="card-title character-role">ANDROID</h2>
+                            <h3 class="character-name mb-2">Unit-7</h3>
+                            <p class="text-muted mb-3"><small>Played by: <strong>Player Name</strong></small></p>
+                            <p class="character-blurb">A sentient AI in a synthetic body, Unit-7 handles maintenance and routine tasks. Recently reprogrammed with emotions, they're learning about human nature. Could they understand mortality?</p>
+                            <div class="character-details mt-3 pt-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                                <p><strong>Occupation:</strong> Maintenance / Support Unit</p>
+                                <p><strong>Secret:</strong> <span class="spoiler">Click to reveal</span></p>
+                                <p><strong>Motive:</strong> <span class="spoiler">Click to reveal</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="index.html" class="btn btn-neon">Back to Selection</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-5 py-4 text-center text-muted">
+        <div class="container">
+            <p>&copy; 2026 Murder in the Void. All mysteries reserved.</p>
+        </div>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

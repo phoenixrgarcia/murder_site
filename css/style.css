@@ -1,0 +1,428 @@
+/* ==========================================
+   MURDER IN THE VOID - Custom Styles
+   Dark Space Western Theme
+   ========================================== */
+
+:root {
+    --primary-neon: #00ff88;
+    --secondary-neon: #ff0080;
+    --danger-neon: #ff1744;
+    --warning-neon: #ffb300;
+    --dark-bg: #0a0e27;
+    --darker-bg: #050812;
+    --card-bg: #1a1f3a;
+    --text-primary: #e0e0e0;
+    --text-muted: #8a8a9e;
+    --border-glow: rgba(0, 255, 136, 0.3);
+    --border-danger: rgba(255, 23, 68, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================================
+   GENERAL
+   ========================================== */
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: var(--darker-bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.dark-bg {
+    background: linear-gradient(135deg, var(--darker-bg) 0%, #1a0033 100%);
+    min-height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==========================================
+   TYPOGRAPHY
+   ========================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+.dramatic-title {
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    color: var(--primary-neon);
+    text-transform: uppercase;
+    font-weight: 900;
+    text-shadow: 0 0 20px var(--primary-neon), 0 0 40px rgba(0, 255, 136, 0.5);
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: var(--secondary-neon);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--primary-neon);
+    text-shadow: 0 0 10px var(--primary-neon);
+    font-weight: 900;
+}
+
+.section-title {
+    color: var(--primary-neon);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.character-name {
+    color: var(--secondary-neon);
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.character-role {
+    color: var(--primary-neon);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+/* ==========================================
+   NAVIGATION
+   ========================================== */
+
+.navbar {
+    background: rgba(10, 14, 39, 0.95);
+    border-bottom: 2px solid var(--border-glow);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--text-primary) !important;
+    margin: 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--primary-neon) !important;
+    text-shadow: 0 0 10px var(--primary-neon);
+}
+
+/* ==========================================
+   CARDS & CONTAINERS
+   ========================================== */
+
+.dark-card {
+    background-color: var(--card-bg) !important;
+    border: 1px solid var(--border-glow) !important;
+    box-shadow: 0 8px 32px rgba(0, 255, 136, 0.1);
+    transition: all 0.3s ease;
+}
+
+.dark-card:hover {
+    box-shadow: 0 12px 48px rgba(0, 255, 136, 0.2);
+    border-color: var(--primary-neon) !important;
+}
+
+.border-glow {
+    border: 1px solid var(--border-glow) !important;
+}
+
+.card-title {
+    color: var(--primary-neon);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* ==========================================
+   FORMS
+   ========================================== */
+
+.form-label {
+    color: var(--text-primary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.dark-select {
+    background-color: var(--card-bg) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-glow) !important;
+    padding: 0.75rem;
+    font-family: 'Courier New', monospace;
+    transition: all 0.3s ease;
+}
+
+.dark-select:focus {
+    background-color: var(--card-bg) !important;
+    color: var(--text-primary) !important;
+    border-color: var(--primary-neon) !important;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+}
+
+.dark-select option {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+
+.form-control:focus {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    border-color: var(--primary-neon);
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+}
+
+/* ==========================================
+   BUTTONS
+   ========================================== */
+
+.btn-neon {
+    background: linear-gradient(135deg, var(--primary-neon) 0%, var(--secondary-neon) 100%);
+    color: var(--darker-bg);
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0.75rem 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+}
+
+.btn-neon:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(0, 255, 136, 0.7), 0 0 60px rgba(255, 0, 128, 0.5);
+    color: var(--darker-bg);
+}
+
+.btn-neon:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================
+   CHARACTER INFO
+   ========================================== */
+
+.character-info {
+    animation: slideIn 0.3s ease;
+}
+
+.character-blurb {
+    color: var(--text-primary);
+    font-size: 1rem;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.character-card {
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.character-card:hover {
+    transform: translateY(-5px);
+}
+
+.character-details p {
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.character-details strong {
+    color: var(--primary-neon);
+}
+
+/* ==========================================
+   RULES PAGE
+   ========================================== */
+
+.rule-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.rule-list li {
+    padding: 0.75rem 0 0.75rem 2rem;
+    position: relative;
+    color: var(--text-primary);
+}
+
+.rule-list li:before {
+    content: "⚡";
+    position: absolute;
+    left: 0;
+    color: var(--primary-neon);
+}
+
+section {
+    animation: fadeIn 0.5s ease;
+}
+
+/* ==========================================
+   DIVIDERS
+   ========================================== */
+
+.divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary-neon), transparent);
+    margin: 1rem 0;
+}
+
+/* ==========================================
+   LINKS & INTERACTIVE
+   ========================================== */
+
+a {
+    color: var(--primary-neon);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-neon);
+    text-shadow: 0 0 10px var(--primary-neon);
+}
+
+.glow-link {
+    border-bottom: 1px dotted var(--primary-neon);
+    padding-bottom: 2px;
+}
+
+.glow-link:hover {
+    text-shadow: 0 0 15px var(--primary-neon);
+    border-bottom-color: var(--secondary-neon);
+}
+
+.spoiler {
+    color: var(--text-muted);
+    cursor: help;
+    border-bottom: 1px dotted var(--text-muted);
+}
+
+/* ==========================================
+   CHARACTERS GRID
+   ========================================== */
+
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+.footer {
+    background: rgba(10, 14, 39, 0.95);
+    border-top: 1px solid var(--border-glow);
+    margin-top: auto;
+}
+
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 768px) {
+    .dramatic-title {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .navbar-nav {
+        margin-top: 1rem;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        margin: 0.5rem 0;
+    }
+
+    .characters-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* ==========================================
+   BOOTSTRAP OVERRIDES
+   ========================================== */
+
+.btn-close {
+    filter: invert(1) brightness(1.2);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--darker-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-glow);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-neon);
+}

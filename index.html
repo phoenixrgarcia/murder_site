@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murder in the Void - A Space Western Mystery</title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script defer src="node_modules/alpinejs/dist/cdn.min.js"></script>
+</head>
+<body class="dark-bg">
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark navbar-expand-lg mb-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-title">⚡ MURDER IN THE VOID ⚡</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rules.html">Rules</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="characters.html">Characters</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <!-- Title Section -->
+                <div class="text-center mb-5">
+                    <h1 class="dramatic-title">MURDER IN THE VOID</h1>
+                    <p class="subtitle">A Space Western Mystery</p>
+                    <div class="divider"></div>
+                </div>
+
+                <!-- Character Selection -->
+                <div x-data="characterSelector()" class="card dark-card border-glow">
+                    <div class="card-body">
+                        <h2 class="card-title text-center mb-4">Select Your Character</h2>
+                        
+                        <div class="mb-3">
+                            <label for="characterSelect" class="form-label">Choose your identity:</label>
+                            <select id="characterSelect" x-model="selectedCharacterId" @change="selectCharacter()" class="form-select dark-select">
+                                <option value="">-- Select a Character --</option>
+                                <option value="captain">Captain Vex Donovan</option>
+                                <option value="engineer">Chief Engineer Kess "Wrench" Morgan</option>
+                                <option value="medic">Dr. Atlas Kane</option>
+                                <option value="gunslinger">The Gunslinger - Vera Cross</option>
+                                <option value="merchant">The Merchant - Silas Crow</option>
+                                <option value="robot">Unit-7 (Android)</option>
+                            </select>
+                        </div>
+
+                        <!-- Character Info Display -->
+                        <template x-if="selectedCharacter">
+                            <div class="character-info mt-4 pt-4" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                                <h3 class="character-name mb-2" x-text="selectedCharacter.name"></h3>
+                                <p class="text-muted mb-3">
+                                    <small>Played by: <strong x-text="selectedCharacter.player"></strong></small>
+                                </p>
+                                <p class="character-blurb" x-text="selectedCharacter.blurb"></p>
+                                <button class="btn btn-neon mt-3 w-100">Enter as <span x-text="selectedCharacter.name"></span></button>
+                            </div>
+                        </template>
+
+                        <template x-if="!selectedCharacter">
+                            <div class="text-center text-muted mt-4 pt-4" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                                <p>Select a character to begin your investigation...</p>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+
+                <!-- Info Links -->
+                <div class="text-center mt-5">
+                    <p class="text-muted">New to this investigation? <a href="rules.html" class="glow-link">Read the rules</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-5 py-4 text-center text-muted">
+        <div class="container">
+            <p>&copy; 2026 Murder in the Void. All mysteries reserved.</p>
+        </div>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
