@@ -8,38 +8,27 @@ function characterSelector() {
             captain: {
                 name: 'Captain Vex Donovan',
                 player: 'Player Name',
-                blurb: 'A seasoned captain with decades of space exploration. Known for tactical brilliance and ruthless pragmatism. The Void Wanderer is everything to her—would she kill to protect it?'
+                blurb: 'A seasoned captain with decades of space exploration. Known for tactical brilliance and ruthless pragmatism. The Void Wanderer is everything to her—would she kill to protect it?',
+                password: "bigM@nInCharge"
             },
             engineer: {
                 name: 'Chief Engineer Kess "Wrench" Morgan',
                 player: 'Player Name',
-                blurb: 'Grease-stained genius of the engines. Brilliant but volatile, with a short fuse and a list of grievances. What secrets die with the victim in your sector?'
+                blurb: 'Grease-stained genius of the engines. Brilliant but volatile, with a short fuse and a list of grievances. What secrets die with the victim in your sector?',
+                password: "password123"
             },
             medic: {
                 name: 'Dr. Atlas Kane',
                 player: 'Player Name',
-                blurb: 'Brilliant physician with access to every poison known to the void. Troubled past, troubled present. What was their connection to the deceased?'
+                blurb: 'Brilliant physician with access to every poison known to the void. Troubled past, troubled present. What was their connection to the deceased?',
+                password: "stillInD3bt"
             },
-            gunslinger: {
-                name: 'Vera Cross',
-                player: 'Player Name',
-                blurb: 'Mysterious bounty hunter with a deadly hand and a deadly past. Joined the crew under circumstances best left unquestioned. Old debts collect interest.'
-            },
-            merchant: {
-                name: 'Silas Crow',
-                player: 'Player Name',
-                blurb: 'Smooth-talking trader in contraband and secrets. Always working an angle. What cargo was really in that hold? What information was worth killing for?'
-            },
-            robot: {
-                name: 'Unit-7',
-                player: 'Player Name',
-                blurb: 'Newly sentient android learning humanity one interaction at a time. Programmed to serve, but what happens when you give an AI emotions and free will?'
-            }
         },
 
         selectCharacter() {
             if (this.selectedCharacterId) {
                 this.selectedCharacter = this.characters[this.selectedCharacterId];
+                this.selectedCharacterPassword = this.selectedCharacter.password; // Store the password for later use
             } else {
                 this.selectedCharacter = null;
             }

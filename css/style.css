@@ -76,6 +76,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary-neon);
     text-shadow: 0 0 10px var(--primary-neon);
     font-weight: 900;
+    text-align: right;
 }
 
 .section-title {
@@ -189,6 +190,15 @@ h1, h2, h3, h4, h5, h6 {
 .dark-select option {
     background-color: var(--card-bg);
     color: var(--text-primary);
+}
+
+/* images inside the select2 dropdown */
+.character-option-img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    margin-right: 8px;
+    vertical-align: middle;
 }
 
 .form-control:focus {
